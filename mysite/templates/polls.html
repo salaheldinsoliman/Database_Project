@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <form action={% url 'polls' %} method="GET">
+        {% csrf_token %}
+        <label for="phone_number">Get Country By Phone Phone Number:</label><br>
+        <input type="text" id="phone_number" name="phone_number"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor %}
+    {% for x in cursor %}
+    {{ x }}
+    {% endfor %}
+    {% endif %}
+
+    <br> 
+    <hr>
+    
+    <br>
+
+    <form action={% url 'polls2' %} method="GET">
+        {% csrf_token %}
+        <label for="GroupBy">Get Top 10 Countries By:</label><br>
+        <input type="text" id="GroupBy" name="GroupBy"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor2 %}
+    {% for a in cursor2 %}
+    {{ a }}
+    {% endfor %}
+    {% endif %}
+
+    <br> 
+    <hr>
+    
+    <br>
+
+    <form action={% url 'polls3' %} method="GET">
+        {% csrf_token %}
+        <label for="DrivingDirection">Get Countries that drive on left vs right(enter left or right):</label><br>
+        <input type="text" id="DrivingDirection" name="DrivingDirection"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor3 %}
+    {% for a in cursor3 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+
+    <br> 
+    <hr>
+    
+    <br>
+
+
+    <form action={% url 'polls4' %} method="GET">
+        {% csrf_token %}
+        <label for="Country">Get Country Info by Name</label><br>
+        <input type="text" id="Country" name="Country"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor4 %}
+    {% for a in cursor4 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+
+    <br> 
+    <hr>
+    
+    <br>
+
+
+
+
+    <form action={% url 'polls5' %} method="GET">
+        {% csrf_token %}
+        <label for="Capital">Get Capital Info by Name</label><br>
+        <input type="text" id="Capital" name="Capital"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor5 %}
+    {% for a in cursor5 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+
+
+    <br> 
+    <hr>
+    
+    <br>
+
+    <form action={% url 'polls6' %} method="GET">
+        {% csrf_token %}
+        <label for="Ruler">Get Ruler Info by Name(enter _ instead of spaces)</label><br>
+        <input type="text" id="Ruler" name="Ruler"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor6 %}
+    {% for a in cursor6 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+
+    <br> 
+    <hr>
+    
+    <br>
+
+    <h1>Register A visit</h1>
+    <form action={% url 'polls7' %} method="GET">
+        {% csrf_token %}
+        <label for="username">username</label><br>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="traveldate">date</label><br>
+        <input type="text" id="traveldate" name="traveldate"><br>
+
+        <label for="rating">rating</label><br>
+        <input type="text" id="rating" name="rating"><br>
+
+        <label for="review">Textual review</label><br>
+        <input type="text" id="review" name="review"><br>
+
+        <label for="country">Country</label><br>
+        <input type="text" id="country" name="country"><br>
+
+
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor7 %}
+    {% for a in cursor7 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+    <br> 
+    <hr>
+    
+    <br>
+
+    <form action={% url 'polls8' %} method="GET">
+        {% csrf_token %}
+        <label for="Country_name">Get Travels by CountryName</label><br>
+        <input type="text" id="Country_name" name="Country_name"><br>
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor8 %}
+    {% for a in cursor8 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+
+
+    
+    <br> 
+    <hr>
+    
+    <br>
+
+    
+    <h1>Register A User</h1>
+    <form action={% url 'polls9' %} method="GET">
+        {% csrf_token %}
+        <label for="email">email</label><br>
+        <input type="text" id="email" name="email"><br>
+
+        <label for="user_name">user_name</label><br>
+        <input type="text" id="user_name" name="user_name"><br>
+
+        <label for="gender">gender</label><br>
+        <input type="text" id="gender" name="gender"><br>
+
+        <label for="age">age</label><br>
+        <input type="text" id="age" name="age"><br>
+
+        <label for="birthdate">birthdate</label><br>
+        <input type="text" id="birthdate" name="birthdate"><br>
+
+
+        <input type="submit" value="Submit"/>
+    </form>
+    {% if cursor9 %}
+    {% for a in cursor9 %}
+    {{ a }}
+    <br>
+    {% endfor %}
+    {% endif %}
+
+
+
+
+</html>
